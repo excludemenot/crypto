@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="ui input focus">
+  <input type="text" placeholder="TICKER">
+</div>
+
+<div class="ui input focus">
+  <input type="text" placeholder="Price">
+</div>
+
+<div class="ui input focus">
+  <input type="text" placeholder="P/E ratio">
+</div>
+
+<button class="ui secondary button">
+  Okay
+</button>
+<button class="ui button">
+  Clear
+</button>
+
+<div class="ui form">
+  <div class="inline fields">
+    <label>Amount of P/E to seek</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="frequency" checked="checked">
+        <label>Less then market</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="frequency">
+        <label>Close to market</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="frequency">
+        <label>Higher then market</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="ui celled table">
+  <thead>
+    <tr><th>Ticker</th>
+    <th>Cost</th>
+    <th>P/E ratio</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td data-label="Name">TSLA</td>
+      <td data-label="Age">800</td>
+      <td data-label="Job">75</td>
+    </tr>
+    <tr>
+      <td data-label="Name">SPCE</td>
+      <td data-label="Age">45</td>
+      <td data-label="Job">27</td>
+    </tr>
+    <tr>
+      <td data-label="Name">NOK</td>
+      <td data-label="Age">4,32</td>
+      <td data-label="Job">9</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
